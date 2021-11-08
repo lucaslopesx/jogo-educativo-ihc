@@ -12,21 +12,21 @@ namespace projetofinaldesign
 {
     public partial class frmCategoria : Form
     {
+        private Perguntas data = new Perguntas();
         private string jogador1, jogador2;
         private string nomeMateria;
-        public frmCategoria(string x, string y)
+        public frmCategoria()
         {
             InitializeComponent();
-            this.jogador1 = x;
-            this.jogador2 = y;
+            
         }
 
-        private void cmdAstronomia_Click(object sender, EventArgs e)
+        public void entradaValida(string materia)
         {
             if (comboBox1.Text != "")
             {
-                nomeMateria = "Astronomia";
-                frmRoleta fr = new frmRoleta(nomeMateria, jogador1, jogador2);
+                nomeMateria = materia;
+                frmRoleta fr = new frmRoleta();
                 fr.ShowDialog();
             }
             else
@@ -35,15 +35,59 @@ namespace projetofinaldesign
             }
         }
 
+        private void cmdAstronomia_Click(object sender, EventArgs e)
+        {
+            string materia = "astronomia";
+            entradaValida(materia);
+        }
+
+
+        private void cmdZoologia_Click(object sender, EventArgs e)
+        {
+            string materia = "zoologia";
+            entradaValida(materia);
+        }
+
+
+        private void cmdQuimica_Click(object sender, EventArgs e)
+        {
+            string materia = "quimica";
+            entradaValida(materia);
+        }
+
+        private void cmdGeografia_Click(object sender, EventArgs e)
+        {
+            string materia = "geografia";
+            entradaValida(materia);
+        }
+
+        private void cmdFisica_Click(object sender, EventArgs e)
+        {
+            string materia = "fisica";
+            entradaValida(materia);
+        }
+
+        private void cmdBotanica_Click(object sender, EventArgs e)
+        {
+            string materia = "fisica";
+            entradaValida(materia);
+        }
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label2.Text = comboBox1.Text;
+            data.IdJogador = int.Parse(comboBox1.SelectedValue.ToString());
+            data.ConsultJogador();
+
+            txtNomeJogador.Text = data.NomeJogador;
         }
 
         private void frmCategoria_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Add(jogador1);
-            comboBox1.Items.Add(jogador2);
+            comboBox1.DisplayMember = "nomeJogador";
+            comboBox1.ValueMember = "idJogador";
+            comboBox1.DataSource = data.List().Tables[0];
         }
+
+
     }
 }

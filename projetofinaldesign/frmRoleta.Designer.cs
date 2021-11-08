@@ -330,7 +330,6 @@ namespace projetofinaldesign
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRoleta";
             this.Text = "frmRoleta";
-            this.Load += new System.EventHandler(this.frmRoleta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();

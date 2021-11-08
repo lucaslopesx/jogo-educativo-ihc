@@ -12,20 +12,26 @@ namespace projetofinaldesign
 {
     public partial class frmCadastro : Form
     {
+        private Perguntas data = new Perguntas();
+        string jog1= " ";
+        string jog2 = " ";
+        
         public frmCadastro()
         {
             InitializeComponent();
         }
-        private string jogador1;
-        private string jogador2;
         private void cmdIniciar_Click(object sender, EventArgs e)
         {
             if(txtJogador1.Text !="" && txtJogador2.Text !="")
             {
-                jogador1 = txtJogador1.Text;
-                jogador2 = txtJogador2.Text;
-                frmCategoria fca = new frmCategoria(jogador1, jogador2);
-                fca.ShowDialog();
+                data.NomeJogador = txtJogador1.Text;
+                data.InsertJogador();
+
+                data.NomeJogador = txtJogador2.Text;
+                data.InsertJogador();
+
+                frmCategoria fc = new frmCategoria();
+                fc.ShowDialog();
             }
             else
             {

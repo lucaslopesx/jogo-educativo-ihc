@@ -12,16 +12,10 @@ namespace projetofinaldesign
 {
     public partial class frmRoleta : Form
     {
-        private string nomeMateria;
-        private string jogador1;
-        private string jogador2;
 
-        public frmRoleta(string x, string jog1, string jog2)
+        public frmRoleta()
         {
             InitializeComponent();
-            this.nomeMateria = x;
-            this.jogador1 = jog1;
-            this.jogador2 = jog2;
         }
 
         private void cmdRodar_Click(object sender, EventArgs e)
@@ -41,10 +35,6 @@ namespace projetofinaldesign
             aGauge1.Value = aGauge1.Value + 15;
         }
 
-        private void frmRoleta_Load(object sender, EventArgs e)
-        {
-            txtJogador1.Text = jogador1;
-            txtjogador2.Text = jogador2;
-        }
+
     }
 }
