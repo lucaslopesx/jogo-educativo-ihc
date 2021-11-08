@@ -66,6 +66,7 @@ namespace projetofinaldesign
             }
             connection.Disconnect();
         }
+
         public DataSet List()
         {
             string sql = $"Select top 2 * from jogador order by idJogador desc";

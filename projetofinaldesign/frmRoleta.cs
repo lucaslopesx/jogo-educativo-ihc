@@ -12,7 +12,8 @@ namespace projetofinaldesign
 {
     public partial class frmRoleta : Form
     {
-
+        private Perguntas data = new Perguntas();
+        string[] jogador = new string[2];
         public frmRoleta()
         {
             InitializeComponent();
@@ -35,6 +36,10 @@ namespace projetofinaldesign
             aGauge1.Value = aGauge1.Value + 15;
         }
 
-
+        private void frmRoleta_Load(object sender, EventArgs e)
+        {
+            txtJogador1.Text = data.List().Tables[0].Rows[0].ItemArray[1].ToString();
+            txtjogador2.Text = data.List().Tables[0].Rows[1].ItemArray[1].ToString();
+        }
     }
 }

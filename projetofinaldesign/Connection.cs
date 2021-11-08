@@ -15,6 +15,7 @@ namespace projetofinaldesign
         public SqlDataReader dr;
         SqlDataAdapter da;
         public DataSet ds;
+        public DataTable dt;
 
         public void Connect()
         {
