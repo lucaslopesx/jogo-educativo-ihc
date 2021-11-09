@@ -59,7 +59,6 @@
             this.txtEnunciado.TabIndex = 14;
             this.txtEnunciado.Text = "Enunciado da pergunta";
             this.txtEnunciado.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.txtEnunciado.Click += new System.EventHandler(this.txtEnunciado_Click);
             // 
             // cmdPerguntaA
             // 
@@ -85,6 +84,7 @@
             this.cmdPerguntaB.TabIndex = 17;
             this.cmdPerguntaB.Text = resources.GetString("cmdPerguntaB.Text");
             this.cmdPerguntaB.UseVisualStyleBackColor = false;
+            this.cmdPerguntaB.Click += new System.EventHandler(this.cmdPerguntaB_Click);
             // 
             // cmdPerguntaC
             // 
@@ -97,6 +97,7 @@
             this.cmdPerguntaC.TabIndex = 18;
             this.cmdPerguntaC.Text = resources.GetString("cmdPerguntaC.Text");
             this.cmdPerguntaC.UseVisualStyleBackColor = false;
+            this.cmdPerguntaC.Click += new System.EventHandler(this.cmdPerguntaC_Click);
             // 
             // cmdPerguntaD
             // 
@@ -109,6 +110,7 @@
             this.cmdPerguntaD.TabIndex = 19;
             this.cmdPerguntaD.Text = resources.GetString("cmdPerguntaD.Text");
             this.cmdPerguntaD.UseVisualStyleBackColor = false;
+            this.cmdPerguntaD.Click += new System.EventHandler(this.cmdPerguntaD_Click);
             // 
             // frmPergunta
             // 
