@@ -59,6 +59,12 @@
     <Compile Include="frmFinalJogo.Designer.cs">
       <DependentUpon>frmFinalJogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPergunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPergunta.Designer.cs">
+      <DependentUpon>frmPergunta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResultado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmFinalJogo.resx">
       <DependentUpon>frmFinalJogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPergunta.resx">
+      <DependentUpon>frmPergunta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

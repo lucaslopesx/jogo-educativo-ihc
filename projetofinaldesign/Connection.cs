@@ -15,11 +15,14 @@ namespace projetofinaldesign
         public SqlDataReader dr;
         SqlDataAdapter da;
         public DataSet ds;
+        public DataTable dt;
 
         public void Connect()
         {
             cn.ConnectionString = "SERVER = DESKTOP-GM7EVH8\\SQLEXPRESS; Database=Perguntas; UID=sa; PWD=1234;";
+            //oi
             cn.Open();
+
         }
 
         public void Disconnect()

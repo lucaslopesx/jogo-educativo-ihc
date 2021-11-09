@@ -17,6 +17,9 @@ namespace projetofinaldesign
             InitializeComponent();
         }
 
-        
+        private void frmFinalJogo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,6 @@ namespace projetofinaldesign
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoria));
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,6 +43,8 @@ namespace projetofinaldesign
             this.cmdZoologia = new System.Windows.Forms.PictureBox();
             this.cmdAstronomia = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtNomeJogador = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cmdBotanica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdFisica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdGeografia)).BeginInit();
@@ -52,27 +53,14 @@ namespace projetofinaldesign
             ((System.ComponentModel.ISupportInitialize)(this.cmdAstronomia)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(335, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(404, 67);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Nome do jogador";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(41, 249);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(31, 202);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 56);
+            this.label1.Size = new System.Drawing.Size(252, 45);
             this.label1.TabIndex = 14;
             this.label1.Text = "ASTRONOMIA";
             // 
@@ -81,10 +69,9 @@ namespace projetofinaldesign
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(408, 249);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(306, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(249, 56);
+            this.label3.Size = new System.Drawing.Size(201, 45);
             this.label3.TabIndex = 16;
             this.label3.Text = "ZOOLOGIA";
             // 
@@ -93,10 +80,9 @@ namespace projetofinaldesign
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(755, 249);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(566, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(221, 56);
+            this.label4.Size = new System.Drawing.Size(175, 45);
             this.label4.TabIndex = 18;
             this.label4.Text = "QUÍMICA";
             // 
@@ -105,10 +91,9 @@ namespace projetofinaldesign
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(41, 485);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(31, 394);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(314, 56);
+            this.label5.Size = new System.Drawing.Size(251, 45);
             this.label5.TabIndex = 20;
             this.label5.Text = "GEOCIÊNCIAS";
             // 
@@ -117,10 +102,9 @@ namespace projetofinaldesign
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(449, 485);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(337, 394);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 56);
+            this.label6.Size = new System.Drawing.Size(137, 45);
             this.label6.TabIndex = 22;
             this.label6.Text = "FÍSICA";
             // 
@@ -129,75 +113,79 @@ namespace projetofinaldesign
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(752, 485);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(564, 394);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 56);
+            this.label7.Size = new System.Drawing.Size(0, 45);
             this.label7.TabIndex = 24;
             // 
             // cmdBotanica
             // 
+            this.cmdBotanica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdBotanica.Image = global::projetofinaldesign.Properties.Resources.botanicaEscolha;
-            this.cmdBotanica.Location = new System.Drawing.Point(728, 330);
-            this.cmdBotanica.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdBotanica.Location = new System.Drawing.Point(546, 268);
             this.cmdBotanica.Name = "cmdBotanica";
-            this.cmdBotanica.Size = new System.Drawing.Size(287, 151);
+            this.cmdBotanica.Size = new System.Drawing.Size(215, 123);
             this.cmdBotanica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cmdBotanica.TabIndex = 23;
             this.cmdBotanica.TabStop = false;
+            this.cmdBotanica.Click += new System.EventHandler(this.cmdBotanica_Click);
             // 
             // cmdFisica
             // 
+            this.cmdFisica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdFisica.Image = global::projetofinaldesign.Properties.Resources.depositphotos_10204709_stock_illustration_physical_formulas_and_phenomenons_on;
-            this.cmdFisica.Location = new System.Drawing.Point(392, 330);
-            this.cmdFisica.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdFisica.Location = new System.Drawing.Point(294, 268);
             this.cmdFisica.Name = "cmdFisica";
-            this.cmdFisica.Size = new System.Drawing.Size(287, 151);
+            this.cmdFisica.Size = new System.Drawing.Size(215, 123);
             this.cmdFisica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cmdFisica.TabIndex = 21;
             this.cmdFisica.TabStop = false;
+            this.cmdFisica.Click += new System.EventHandler(this.cmdFisica_Click);
             // 
             // cmdGeografia
             // 
+            this.cmdGeografia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdGeografia.Image = ((System.Drawing.Image)(resources.GetObject("cmdGeografia.Image")));
-            this.cmdGeografia.Location = new System.Drawing.Point(64, 330);
-            this.cmdGeografia.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdGeografia.Location = new System.Drawing.Point(48, 268);
             this.cmdGeografia.Name = "cmdGeografia";
-            this.cmdGeografia.Size = new System.Drawing.Size(287, 151);
+            this.cmdGeografia.Size = new System.Drawing.Size(215, 123);
             this.cmdGeografia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cmdGeografia.TabIndex = 19;
             this.cmdGeografia.TabStop = false;
+            this.cmdGeografia.Click += new System.EventHandler(this.cmdGeografia_Click);
             // 
             // cmdQuimica
             // 
+            this.cmdQuimica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdQuimica.Enabled = false;
             this.cmdQuimica.Image = global::projetofinaldesign.Properties.Resources.ilustracao_de_produtos_quimicos_quimicos_286786_251;
-            this.cmdQuimica.Location = new System.Drawing.Point(728, 94);
-            this.cmdQuimica.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdQuimica.Location = new System.Drawing.Point(546, 76);
             this.cmdQuimica.Name = "cmdQuimica";
-            this.cmdQuimica.Size = new System.Drawing.Size(287, 151);
+            this.cmdQuimica.Size = new System.Drawing.Size(215, 123);
             this.cmdQuimica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cmdQuimica.TabIndex = 17;
             this.cmdQuimica.TabStop = false;
+            this.cmdQuimica.Click += new System.EventHandler(this.cmdQuimica_Click);
             // 
             // cmdZoologia
             // 
+            this.cmdZoologia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdZoologia.Image = global::projetofinaldesign.Properties.Resources.zooEscolha;
-            this.cmdZoologia.Location = new System.Drawing.Point(392, 94);
-            this.cmdZoologia.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdZoologia.Location = new System.Drawing.Point(294, 76);
             this.cmdZoologia.Name = "cmdZoologia";
-            this.cmdZoologia.Size = new System.Drawing.Size(287, 151);
+            this.cmdZoologia.Size = new System.Drawing.Size(215, 123);
             this.cmdZoologia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cmdZoologia.TabIndex = 15;
             this.cmdZoologia.TabStop = false;
+            this.cmdZoologia.Click += new System.EventHandler(this.cmdZoologia_Click);
             // 
             // cmdAstronomia
             // 
+            this.cmdAstronomia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdAstronomia.Image = global::projetofinaldesign.Properties.Resources.gettyimages_1010488716_612x612;
-            this.cmdAstronomia.Location = new System.Drawing.Point(64, 94);
-            this.cmdAstronomia.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdAstronomia.Location = new System.Drawing.Point(48, 76);
             this.cmdAstronomia.Name = "cmdAstronomia";
-            this.cmdAstronomia.Size = new System.Drawing.Size(287, 151);
+            this.cmdAstronomia.Size = new System.Drawing.Size(215, 123);
             this.cmdAstronomia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cmdAstronomia.TabIndex = 13;
             this.cmdAstronomia.TabStop = false;
@@ -210,17 +198,41 @@ namespace projetofinaldesign
             this.comboBox1.ForeColor = System.Drawing.Color.Teal;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 33);
+            this.comboBox1.Size = new System.Drawing.Size(136, 28);
             this.comboBox1.TabIndex = 25;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(554, 396);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(196, 45);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "BOTÂNICA";
+            // 
+            // txtNomeJogador
+            // 
+            this.txtNomeJogador.AutoSize = true;
+            this.txtNomeJogador.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeJogador.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtNomeJogador.Location = new System.Drawing.Point(295, 0);
+            this.txtNomeJogador.Name = "txtNomeJogador";
+            this.txtNomeJogador.Size = new System.Drawing.Size(212, 67);
+            this.txtNomeJogador.TabIndex = 12;
+            this.txtNomeJogador.Text = "Jogador";
+            // 
             // frmCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmdBotanica);
@@ -234,8 +246,7 @@ namespace projetofinaldesign
             this.Controls.Add(this.cmdZoologia);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdAstronomia);
-            this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Controls.Add(this.txtNomeJogador);
             this.Name = "frmCategoria";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
@@ -251,8 +262,6 @@ namespace projetofinaldesign
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox cmdAstronomia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -266,5 +275,7 @@ namespace projetofinaldesign
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox cmdBotanica;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label txtNomeJogador;
     }
 }

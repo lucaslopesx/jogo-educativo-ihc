@@ -12,16 +12,14 @@ namespace projetofinaldesign
 {
     public partial class frmRoleta : Form
     {
-        private string nomeMateria;
-        private string jogador1;
-        private string jogador2;
-
-        public frmRoleta(string x, string jog1, string jog2)
+        private Perguntas data = new Perguntas();
+        string[] jogador = new string[2];
+        string categoria;
+        public frmRoleta(string categoria)
         {
+            this.categoria = categoria;
+            data.Categoria = categoria;
             InitializeComponent();
-            this.nomeMateria = x;
-            this.jogador1 = jog1;
-            this.jogador2 = jog2;
         }
 
         private void cmdRodar_Click(object sender, EventArgs e)
@@ -34,17 +32,18 @@ namespace projetofinaldesign
             if (aGauge1.Value == 360 || aGauge1.Value > 360)
                 aGauge1.Value = 0;
         }
-
+        private void frmRoleta_Load(object sender, EventArgs e)
+        {
+            txtJogador1.Text = data.List().Tables[0].Rows[0].ItemArray[1].ToString();
+            txtjogador2.Text = data.List().Tables[0].Rows[1].ItemArray[1].ToString();
+        }
         private void CmdParar_Click(object sender, EventArgs e)
         {
             timer1.Enabled = false;
             aGauge1.Value = aGauge1.Value + 15;
-        }
 
-        private void frmRoleta_Load(object sender, EventArgs e)
-        {
-            txtJogador1.Text = jogador1;
-            txtjogador2.Text = jogador2;
+            frmPergunta fp = new frmPergunta(this.categoria);
+            fp.ShowDialog();
         }
     }
 }
