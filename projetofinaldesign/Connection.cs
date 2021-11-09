@@ -20,7 +20,6 @@ namespace projetofinaldesign
         public void Connect()
         {
             cn.ConnectionString = "SERVER = DESKTOP-GM7EVH8\\SQLEXPRESS; Database=Perguntas; UID=sa; PWD=1234;";
-            //oi
             cn.Open();
 
         }
