@@ -125,6 +125,7 @@
             this.Controls.Add(this.txtEnunciado);
             this.Controls.Add(this.txtCategoria);
             this.Name = "frmPergunta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPergunta";
             this.Load += new System.EventHandler(this.frmPergunta_Load);
             this.ResumeLayout(false);

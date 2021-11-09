@@ -54,7 +54,7 @@ namespace projetofinaldesign
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(71, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(389, 111);
+            this.label1.Size = new System.Drawing.Size(314, 90);
             this.label1.TabIndex = 0;
             this.label1.Text = "Parabéns";
             // 
@@ -105,7 +105,7 @@ namespace projetofinaldesign
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label3.Location = new System.Drawing.Point(269, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(485, 84);
+            this.label3.Size = new System.Drawing.Size(388, 67);
             this.label3.TabIndex = 9;
             this.label3.Text = "Continue assim!!";
             // 
@@ -141,7 +141,7 @@ namespace projetofinaldesign
             // 
             // frmResultado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(791, 450);
@@ -156,6 +156,7 @@ namespace projetofinaldesign
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmResultado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

@@ -316,6 +316,7 @@ namespace projetofinaldesign
             this.Controls.Add(this.txtJogador1);
             this.Controls.Add(this.txtjogador2);
             this.Name = "frmRoleta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRoleta";
             this.Load += new System.EventHandler(this.frmRoleta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();

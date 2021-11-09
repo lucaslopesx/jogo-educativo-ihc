@@ -15,8 +15,10 @@ namespace projetofinaldesign
         private Perguntas data = new Perguntas();
         int resultado;
         int escolha;
-        public frmPergunta(string categoria)
+        string boneco;
+        public frmPergunta(string categoria,int idJogador)
         {
+            data.IdJogador = idJogador;
             data.Categoria = categoria;
             data.IdPergunta = 1;
             InitializeComponent();
@@ -39,6 +41,7 @@ namespace projetofinaldesign
             if (resultado == escolha)
             {
                 frmResultado fr = new frmResultado();
+                data.UpdateJogador();
                 fr.ShowDialog();
             }
         }

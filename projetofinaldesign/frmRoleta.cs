@@ -13,10 +13,12 @@ namespace projetofinaldesign
     public partial class frmRoleta : Form
     {
         private Perguntas data = new Perguntas();
-        string[] jogador = new string[2];
         string categoria;
-        public frmRoleta(string categoria)
+        int idJogador;
+        public frmRoleta(string categoria, int idJogador)
         {
+            this.idJogador = idJogador;
+            data.IdJogador = idJogador;
             this.categoria = categoria;
             data.Categoria = categoria;
             InitializeComponent();
@@ -42,7 +44,7 @@ namespace projetofinaldesign
             timer1.Enabled = false;
             aGauge1.Value = aGauge1.Value + 15;
 
-            frmPergunta fp = new frmPergunta(this.categoria);
+            frmPergunta fp = new frmPergunta(this.categoria, this.idJogador);
             fp.ShowDialog();
         }
     }

@@ -23,7 +23,8 @@ namespace projetofinaldesign
         {
             if (comboBox1.Text != "")
             {
-                frmRoleta fr = new frmRoleta(categoria);
+                int idJogador = data.IdJogador;
+                frmRoleta fr = new frmRoleta(categoria, idJogador);
                 fr.ShowDialog();
             }
             else
