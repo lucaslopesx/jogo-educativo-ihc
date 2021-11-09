@@ -21,6 +21,7 @@ namespace projetofinaldesign
         public int Zoologia { get; set; }
         public int IdPergunta { get; set; }
         public int IdJogador { get; set; }
+        public string Enunciado { get; set; }
         public string PerguntaA { get; set; }
         public string PerguntaB { get; set; }
         public string PerguntaC { get; set; }
@@ -43,8 +44,8 @@ namespace projetofinaldesign
                 PerguntaB = connection.dr["perguntaB"].ToString();
                 PerguntaC = connection.dr["perguntaC"].ToString();
                 PerguntaD = connection.dr["perguntaD"].ToString();
+                Enunciado = connection.dr["enunciado"].ToString();
                 Resultado = int.Parse(connection.dr["resultado"].ToString());
-                NomeJogador = connection.dr["nomeJogador"].ToString();
             }
             connection.Disconnect();
         }

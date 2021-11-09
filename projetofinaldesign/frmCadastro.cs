@@ -38,5 +38,10 @@ namespace projetofinaldesign
                 MessageBox.Show("Adicione o nome dos 2 jogadores para começar!");
             }
         }
+
+        private void frmCadastro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

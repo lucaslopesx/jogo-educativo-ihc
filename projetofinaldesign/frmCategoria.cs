@@ -13,20 +13,17 @@ namespace projetofinaldesign
     public partial class frmCategoria : Form
     {
         private Perguntas data = new Perguntas();
-        private string jogador1, jogador2;
-        private string nomeMateria;
         public frmCategoria()
         {
             InitializeComponent();
             
         }
 
-        public void entradaValida(string materia)
+        public void entradaValida(string categoria)
         {
             if (comboBox1.Text != "")
             {
-                nomeMateria = materia;
-                frmRoleta fr = new frmRoleta();
+                frmRoleta fr = new frmRoleta(categoria);
                 fr.ShowDialog();
             }
             else
@@ -37,40 +34,40 @@ namespace projetofinaldesign
 
         private void cmdAstronomia_Click(object sender, EventArgs e)
         {
-            string materia = "astronomia";
-            entradaValida(materia);
+            string categoria = "astronomia";
+            entradaValida(categoria);
         }
 
 
         private void cmdZoologia_Click(object sender, EventArgs e)
         {
-            string materia = "zoologia";
-            entradaValida(materia);
+            string categoria = "zoologia";
+            entradaValida(categoria);
         }
 
 
         private void cmdQuimica_Click(object sender, EventArgs e)
         {
-            string materia = "quimica";
-            entradaValida(materia);
+            string categoria = "quimica";
+            entradaValida(categoria);
         }
 
         private void cmdGeografia_Click(object sender, EventArgs e)
         {
-            string materia = "geografia";
-            entradaValida(materia);
+            string categoria = "geografia";
+            entradaValida(categoria);
         }
 
         private void cmdFisica_Click(object sender, EventArgs e)
         {
-            string materia = "fisica";
-            entradaValida(materia);
+            string categoria = "fisica";
+            entradaValida(categoria);
         }
 
         private void cmdBotanica_Click(object sender, EventArgs e)
         {
-            string materia = "fisica";
-            entradaValida(materia);
+            string categoria = "botanica";
+            entradaValida(categoria);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
