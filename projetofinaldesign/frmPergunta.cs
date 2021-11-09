@@ -16,11 +16,11 @@ namespace projetofinaldesign
         int resultado;
         int escolha;
         string boneco;
-        public frmPergunta(string categoria,int idJogador)
+        public frmPergunta(string categoria,int idJogador, int idPergunta)
         {
             data.IdJogador = idJogador;
             data.Categoria = categoria;
-            data.IdPergunta = 1;
+            data.IdPergunta = idPergunta;
             InitializeComponent();
         }
 

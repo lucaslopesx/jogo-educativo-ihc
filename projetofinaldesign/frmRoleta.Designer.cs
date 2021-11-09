@@ -49,6 +49,7 @@ namespace projetofinaldesign
             this.CmdParar = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.aGauge1 = new System.Windows.Forms.AGauge();
+            this.txtValor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -291,12 +292,22 @@ namespace projetofinaldesign
             this.aGauge1.Text = "aGauge1";
             this.aGauge1.Value = 12F;
             // 
+            // txtValor
+            // 
+            this.txtValor.AutoSize = true;
+            this.txtValor.Location = new System.Drawing.Point(653, 183);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(73, 13);
+            this.txtValor.TabIndex = 25;
+            this.txtValor.Text = "txtValorRoleta";
+            // 
             // frmRoleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 502);
+            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.CmdParar);
             this.Controls.Add(this.cmdRodar);
             this.Controls.Add(this.aGauge1);
@@ -358,5 +369,6 @@ namespace projetofinaldesign
         private System.Windows.Forms.Button cmdRodar;
         private System.Windows.Forms.Button CmdParar;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label txtValor;
     }
 }
