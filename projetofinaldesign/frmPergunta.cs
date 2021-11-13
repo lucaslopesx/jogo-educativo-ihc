@@ -14,17 +14,16 @@ namespace projetofinaldesign
     {
         private Perguntas data = new Perguntas();
         int resultado;
-        public frmPergunta(string categoria)
+        int escolha;
+        string boneco;
+        public frmPergunta(string categoria,int idJogador, int idPergunta)
         {
+            data.IdJogador = idJogador;
             data.Categoria = categoria;
-            data.IdPergunta = 1;
+            data.IdPergunta = idPergunta;
             InitializeComponent();
         }
 
-        private void cmdPerguntaA_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void frmPergunta_Load(object sender, EventArgs e)
         {
@@ -37,10 +36,37 @@ namespace projetofinaldesign
             txtEnunciado.Text = data.Enunciado;
             resultado = data.Resultado;
         }
-
-        private void txtEnunciado_Click(object sender, EventArgs e)
+        public void verificaPergunta(int escolha)
         {
+            if (resultado == escolha)
+            {
+                frmResultado fr = new frmResultado();
+                data.UpdateJogador();
+                fr.ShowDialog();
+            }
+        }
+        private void cmdPerguntaA_Click(object sender, EventArgs e)
+        {
+            escolha = 1;
+            verificaPergunta(escolha);
+        }
 
+        private void cmdPerguntaB_Click(object sender, EventArgs e)
+        {
+            escolha = 2;
+            verificaPergunta(escolha);
+        }
+
+        private void cmdPerguntaC_Click(object sender, EventArgs e)
+        {
+            escolha = 3;
+            verificaPergunta(escolha);
+        }
+
+        private void cmdPerguntaD_Click(object sender, EventArgs e)
+        {
+            escolha = 4;
+            verificaPergunta(escolha);
         }
     }
 }

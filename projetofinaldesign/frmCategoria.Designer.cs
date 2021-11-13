@@ -248,6 +248,7 @@ namespace projetofinaldesign
             this.Controls.Add(this.cmdAstronomia);
             this.Controls.Add(this.txtNomeJogador);
             this.Name = "frmCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmdBotanica)).EndInit();

@@ -12,6 +12,7 @@ namespace projetofinaldesign
 {
     public partial class frmPrincipal : Form
     {
+        int i = 0;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -20,7 +21,14 @@ namespace projetofinaldesign
         private void button1_Click(object sender, EventArgs e)
         {
             frmCadastro fc = new frmCadastro();
+            this.Hide();
             fc.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            i++;
+            label1.Text = $"{i}";
         }
     }
 }

@@ -31,6 +31,7 @@ namespace projetofinaldesign
         {
             this.cmdComecar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,17 +58,30 @@ namespace projetofinaldesign
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(93, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "aaa";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdComecar);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -75,6 +89,7 @@ namespace projetofinaldesign
 
         private System.Windows.Forms.Button cmdComecar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -32,6 +32,7 @@ namespace projetofinaldesign
 
                 frmCategoria fc = new frmCategoria();
                 fc.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -42,6 +43,12 @@ namespace projetofinaldesign
         private void frmCadastro_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPrincipal fp = new frmPrincipal();
+            fp.ShowDialog();
         }
     }
 }

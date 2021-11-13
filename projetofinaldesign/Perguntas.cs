@@ -68,6 +68,12 @@ namespace projetofinaldesign
             connection.Disconnect();
         }
 
+        public void UpdateJogador()
+        {
+            string sql = $"update jogador set {Categoria} = 1 where idJogador = {IdJogador}";
+            connection.Execute(sql);
+        }
+
         public DataSet List()
         {
             string sql = $"Select top 2 * from jogador order by idJogador desc";
