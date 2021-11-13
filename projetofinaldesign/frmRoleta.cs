@@ -39,6 +39,8 @@ namespace projetofinaldesign
         {
             txtJogador1.Text = data.List().Tables[0].Rows[0].ItemArray[1].ToString();
             txtjogador2.Text = data.List().Tables[0].Rows[1].ItemArray[1].ToString();
+
+
         }
         private void CmdParar_Click(object sender, EventArgs e)
         {
