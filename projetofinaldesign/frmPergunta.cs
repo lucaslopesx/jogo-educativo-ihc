@@ -16,13 +16,13 @@ namespace projetofinaldesign
         int resultado;
         int escolha;
         private int tempo = 50;
-        private int idJogador;
+        private string categoriaaux;
         public frmPergunta(string categoria,int idJogador, int idPergunta)
         {
             data.IdJogador = idJogador;
             data.Categoria = categoria;
             data.IdPergunta = idPergunta;
-            this.idJogador = idJogador;
+            categoriaaux = categoria;
             InitializeComponent();
         }
 
@@ -42,13 +42,17 @@ namespace projetofinaldesign
         {
             if (resultado == escolha)
             {
-                frmResultado fr = new frmResultado();
+                frmResultado fr = new frmResultado(categoriaaux);
                 data.UpdateJogador();
+                tempo = -1;
+                timer1.Enabled = false;
+                Hide();
                 fr.ShowDialog();
             }
             else
             {
                 FrmErrou fe = new FrmErrou();
+                Hide();
                 fe.ShowDialog();
             }
         }
@@ -89,6 +93,7 @@ namespace projetofinaldesign
             {
                 Hide();
                 frmTempo ft = new frmTempo();
+                timer1.Enabled = false;
                 ft.ShowDialog();
             }
         }
