@@ -36,7 +36,7 @@ namespace projetofinaldesign
             }
             else
             {
-                MessageBox.Show("Adicione o nome dos 2 jogadores para começar!");
+                MessageBox.Show("Insira 2 jogadores!");
             }
         }
 

@@ -71,6 +71,12 @@
     <Compile Include="frmResultado.Designer.cs">
       <DependentUpon>frmResultado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTempo.Designer.cs">
+      <DependentUpon>frmTempo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,8 +119,8 @@
     <EmbeddedResource Include="frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmResultado.resx">
-      <DependentUpon>frmResultado.cs</DependentUpon>
+    <EmbeddedResource Include="frmTempo.resx">
+      <DependentUpon>frmTempo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRoleta.resx">
       <DependentUpon>frmRoleta.cs</DependentUpon>

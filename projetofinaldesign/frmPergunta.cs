@@ -15,12 +15,14 @@ namespace projetofinaldesign
         private Perguntas data = new Perguntas();
         int resultado;
         int escolha;
-        string boneco;
+        private int tempo = 50;
+        private int idJogador;
         public frmPergunta(string categoria,int idJogador, int idPergunta)
         {
             data.IdJogador = idJogador;
             data.Categoria = categoria;
             data.IdPergunta = idPergunta;
+            this.idJogador = idJogador;
             InitializeComponent();
         }
 
@@ -34,7 +36,7 @@ namespace projetofinaldesign
             cmdPerguntaC.Text = data.PerguntaC;
             cmdPerguntaD.Text = data.PerguntaD;
             txtEnunciado.Text = data.Enunciado;
-            resultado = data.Resultado;
+            resultado = data.Resultado;  
         }
         public void verificaPergunta(int escolha)
         {
@@ -43,6 +45,11 @@ namespace projetofinaldesign
                 frmResultado fr = new frmResultado();
                 data.UpdateJogador();
                 fr.ShowDialog();
+            }
+            else
+            {
+                FrmErrou fe = new FrmErrou();
+                fe.ShowDialog();
             }
         }
         private void cmdPerguntaA_Click(object sender, EventArgs e)
@@ -67,6 +74,23 @@ namespace projetofinaldesign
         {
             escolha = 4;
             verificaPergunta(escolha);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tempo = tempo - 1;
+            label1.Text = "00:" + tempo.ToString();
+            if (tempo<10 && tempo > 0)
+            {
+                label1.Text = "00:0" + tempo.ToString();
+                label1.ForeColor = Color.Red;
+            }
+            if (tempo == 0)
+            {
+                Hide();
+                frmTempo ft = new frmTempo();
+                ft.ShowDialog();
+            }
         }
     }
 }
