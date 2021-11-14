@@ -12,9 +12,21 @@ namespace projetofinaldesign
 {
     public partial class FrmErrou : Form
     {
+        private int i = 0;
         public FrmErrou()
         {
-            InitializeComponent();
+            InitializeComponent();   
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            i++;
+            if(i == 5)
+            {
+                frmCategoria fc = new frmCategoria();
+                Hide();
+                fc.ShowDialog();
+            }
         }
     }
 }
