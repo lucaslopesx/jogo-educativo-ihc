@@ -16,7 +16,6 @@ namespace projetofinaldesign
         public frmCategoria()
         {
             InitializeComponent();
-            
         }
 
         public void entradaValida(string categoria)
@@ -25,7 +24,9 @@ namespace projetofinaldesign
             {
                 int idJogador = data.IdJogador;
                 frmRoleta fr = new frmRoleta(categoria, idJogador);
+                Hide();
                 fr.ShowDialog();
+               
             }
             else
             {
