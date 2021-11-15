@@ -21,7 +21,7 @@ namespace projetofinaldesign
         private void button1_Click(object sender, EventArgs e)
         {
             frmCadastro fc = new frmCadastro();
-            this.Hide();
+            Hide();    //fecha a tela 
             fc.ShowDialog();
         }
 

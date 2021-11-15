@@ -15,12 +15,14 @@ namespace projetofinaldesign
         private Perguntas data = new Perguntas();
         int resultado;
         int escolha;
-        string boneco;
+        private int tempo = 50;
+        private string categoriaaux;
         public frmPergunta(string categoria,int idJogador, int idPergunta)
         {
             data.IdJogador = idJogador;
             data.Categoria = categoria;
             data.IdPergunta = idPergunta;
+            categoriaaux = categoria;
             InitializeComponent();
         }
 
@@ -34,15 +36,24 @@ namespace projetofinaldesign
             cmdPerguntaC.Text = data.PerguntaC;
             cmdPerguntaD.Text = data.PerguntaD;
             txtEnunciado.Text = data.Enunciado;
-            resultado = data.Resultado;
+            resultado = data.Resultado;  
         }
         public void verificaPergunta(int escolha)
         {
             if (resultado == escolha)
             {
-                frmResultado fr = new frmResultado();
+                frmResultado fr = new frmResultado(categoriaaux);
                 data.UpdateJogador();
+                tempo = -1;
+                timer1.Enabled = false;
+                Hide();
                 fr.ShowDialog();
+            }
+            else
+            {
+                FrmErrou fe = new FrmErrou();
+                Hide();
+                fe.ShowDialog();
             }
         }
         private void cmdPerguntaA_Click(object sender, EventArgs e)
@@ -67,6 +78,24 @@ namespace projetofinaldesign
         {
             escolha = 4;
             verificaPergunta(escolha);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tempo = tempo - 1;
+            label1.Text = "00:" + tempo.ToString();
+            if (tempo<10 && tempo > 0)
+            {
+                label1.Text = "00:0" + tempo.ToString();
+                label1.ForeColor = Color.Red;
+            }
+            if (tempo == 0)
+            {
+                Hide();
+                frmTempo ft = new frmTempo();
+                timer1.Enabled = false;
+                ft.ShowDialog();
+            }
         }
     }
 }

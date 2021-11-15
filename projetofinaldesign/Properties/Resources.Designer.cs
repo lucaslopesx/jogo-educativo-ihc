@@ -304,6 +304,26 @@ namespace projetofinaldesign.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sasasasa_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("sasasasa-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap semboneco_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("semboneco-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap v551_puk_36_handdrawnstar_1_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("v551-puk-36-handdrawnstar_1-removebg-preview", resourceCulture);
@@ -317,6 +337,26 @@ namespace projetofinaldesign.Properties {
         internal static System.Drawing.Bitmap vs_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("vs-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xxxxxxxxxx_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("xxxxxxxxxx-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xxxxxxxxxxxx_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("xxxxxxxxxxxx-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

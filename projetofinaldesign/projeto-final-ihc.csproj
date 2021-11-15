@@ -53,6 +53,12 @@
       <DependentUpon>AGauge.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="FrmErrou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmErrou.Designer.cs">
+      <DependentUpon>FrmErrou.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFinalJogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     </Compile>
     <Compile Include="frmResultado.Designer.cs">
       <DependentUpon>frmResultado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTempo.Designer.cs">
+      <DependentUpon>frmTempo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -98,6 +110,9 @@
     <Compile Include="Perguntas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmErrou.resx">
+      <DependentUpon>FrmErrou.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFinalJogo.resx">
       <DependentUpon>frmFinalJogo.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmResultado.resx">
       <DependentUpon>frmResultado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTempo.resx">
+      <DependentUpon>frmTempo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRoleta.resx">
       <DependentUpon>frmRoleta.cs</DependentUpon>
@@ -222,6 +240,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\depositphotos_103742838-stock-photo-wheel-fortune-10-area-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sasasasa-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xxxxxxxxxx-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xxxxxxxxxxxx-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semboneco-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

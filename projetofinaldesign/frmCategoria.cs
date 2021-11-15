@@ -16,7 +16,6 @@ namespace projetofinaldesign
         public frmCategoria()
         {
             InitializeComponent();
-            
         }
 
         public void entradaValida(string categoria)
@@ -25,7 +24,9 @@ namespace projetofinaldesign
             {
                 int idJogador = data.IdJogador;
                 frmRoleta fr = new frmRoleta(categoria, idJogador);
+                Hide();
                 fr.ShowDialog();
+               
             }
             else
             {
@@ -35,39 +36,39 @@ namespace projetofinaldesign
 
         private void cmdAstronomia_Click(object sender, EventArgs e)
         {
-            string categoria = "astronomia";
+            string categoria = "Astronomia";
             entradaValida(categoria);
         }
 
 
         private void cmdZoologia_Click(object sender, EventArgs e)
         {
-            string categoria = "zoologia";
+            string categoria = "Zoologia";
             entradaValida(categoria);
         }
 
 
         private void cmdQuimica_Click(object sender, EventArgs e)
         {
-            string categoria = "quimica";
+            string categoria = "Quimica";
             entradaValida(categoria);
         }
 
         private void cmdGeografia_Click(object sender, EventArgs e)
         {
-            string categoria = "geografia";
+            string categoria = "Geografia";
             entradaValida(categoria);
         }
 
         private void cmdFisica_Click(object sender, EventArgs e)
         {
-            string categoria = "fisica";
+            string categoria = "Fisica";
             entradaValida(categoria);
         }
 
         private void cmdBotanica_Click(object sender, EventArgs e)
         {
-            string categoria = "botanica";
+            string categoria = "Botanica";
             entradaValida(categoria);
         }
 
