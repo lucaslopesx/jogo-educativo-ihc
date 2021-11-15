@@ -16,7 +16,6 @@ namespace projetofinaldesign
         public frmTempo()
         {
             InitializeComponent();
-            this.ControlBox = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -28,11 +27,6 @@ namespace projetofinaldesign
                 frmCategoria fc = new frmCategoria();
                 fc.ShowDialog();
             }
-        }
-
-        private void frmTempo_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

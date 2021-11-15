@@ -13,15 +13,10 @@ namespace projetofinaldesign
     public partial class frmResultado : Form
     {
         private string categoria;
-        Jogador dataJogador = new Jogador();
-        Perguntas data = new Perguntas();
-        private string jogador;
-        public frmResultado(string categoria, string jogador)
+        public frmResultado(string categoria)
         {
-            this.jogador = jogador;
             InitializeComponent();
             this.categoria = categoria;
-            this.ControlBox = false;
         }
 
         private void frmResultado_Load(object sender, EventArgs e)
@@ -39,43 +34,13 @@ namespace projetofinaldesign
                 pictureBox1.Image = Properties.Resources.bonecoGeociencia;
             else
                 pictureBox1.Image = Properties.Resources.quimicaDesenho;
-
-
-            dataJogador.X1 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[2].ToString());
-            dataJogador.X2 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[3].ToString());
-            dataJogador.X3 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[4].ToString());
-            dataJogador.X4 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[5].ToString());
-            dataJogador.X5 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[6].ToString());
-            dataJogador.X6 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[7].ToString());
-            dataJogador.Y1 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[2].ToString());
-            dataJogador.Y2 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[3].ToString());
-            dataJogador.Y3 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[4].ToString());
-            dataJogador.Y4 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[5].ToString());
-            dataJogador.Y5 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[6].ToString());
-            dataJogador.Y6 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[7].ToString());
         }
 
         private void cmdContinuar_Click(object sender, EventArgs e)
         {
-            
-            string vencedor = dataJogador.finalizaJogo(jogador);
-            if (vencedor != "erro")
-            {
-                frmFinalJogo fj = new frmFinalJogo(vencedor);
-                fj.ShowDialog();
-            }
-            else
-            {
-                frmCategoria fc = new frmCategoria();
-                fc.ShowDialog();
-            }
-
+            frmCategoria fc = new frmCategoria();
             Hide();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            fc.ShowDialog();
         }
     }
 }

@@ -34,6 +34,7 @@ namespace projetofinaldesign
             this.label2 = new System.Windows.Forms.Label();
             this.cmdIniciar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,12 +93,23 @@ namespace projetofinaldesign
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(683, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmdIniciar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtJogador2);
@@ -119,5 +131,6 @@ namespace projetofinaldesign
         private System.Windows.Forms.TextBox txtJogador2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button cmdIniciar;
+        private System.Windows.Forms.Button button1;
     }
 }

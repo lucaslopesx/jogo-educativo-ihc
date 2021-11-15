@@ -56,7 +56,7 @@ namespace projetofinaldesign
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(6, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(301, 90);
+            this.label1.Size = new System.Drawing.Size(376, 111);
             this.label1.TabIndex = 0;
             this.label1.Text = "O tempo";
             // 
@@ -107,7 +107,7 @@ namespace projetofinaldesign
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label3.Location = new System.Drawing.Point(349, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 67);
+            this.label3.Size = new System.Drawing.Size(245, 84);
             this.label3.TabIndex = 9;
             this.label3.Text = "acabou!";
             // 
@@ -149,7 +149,7 @@ namespace projetofinaldesign
             // 
             // frmTempo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(791, 450);
@@ -166,7 +166,6 @@ namespace projetofinaldesign
             this.Name = "frmTempo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmTempo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

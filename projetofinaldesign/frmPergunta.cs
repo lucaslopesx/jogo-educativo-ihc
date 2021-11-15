@@ -13,10 +13,8 @@ namespace projetofinaldesign
     public partial class frmPergunta : Form
     {
         private Perguntas data = new Perguntas();
-        private Jogador dataJogador = new Jogador();
         int resultado;
         int escolha;
-        string jogador;
         private int tempo = 50;
         private string categoriaaux;
         public frmPergunta(string categoria,int idJogador, int idPergunta)
@@ -26,20 +24,17 @@ namespace projetofinaldesign
             data.IdPergunta = idPergunta;
             categoriaaux = categoria;
             InitializeComponent();
-            this.ControlBox = false;
         }
 
 
         private void frmPergunta_Load(object sender, EventArgs e)
         {
             data.Consult();
-            data.ConsultJogador();
             txtCategoria.Text = data.Categoria;
             cmdPerguntaA.Text = data.PerguntaA;
             cmdPerguntaB.Text = data.PerguntaB;
             cmdPerguntaC.Text = data.PerguntaC;
             cmdPerguntaD.Text = data.PerguntaD;
-            jogador = data.NomeJogador;
             txtEnunciado.Text = data.Enunciado;
             resultado = data.Resultado;  
         }
@@ -47,7 +42,7 @@ namespace projetofinaldesign
         {
             if (resultado == escolha)
             {
-                frmResultado fr = new frmResultado(categoriaaux, jogador);
+                frmResultado fr = new frmResultado(categoriaaux);
                 data.UpdateJogador();
                 tempo = -1;
                 timer1.Enabled = false;

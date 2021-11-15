@@ -15,8 +15,7 @@ namespace projetofinaldesign
         private int i = 0;
         public FrmErrou()
         {
-            InitializeComponent();
-            this.ControlBox = false;
+            InitializeComponent();   
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -28,11 +27,6 @@ namespace projetofinaldesign
                 Hide();
                 fc.ShowDialog();
             }
-        }
-
-        private void FrmErrou_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
