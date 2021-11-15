@@ -63,6 +63,7 @@ namespace projetofinaldesign
             this.cmdRecomeçar.TabIndex = 15;
             this.cmdRecomeçar.Text = "Recomeçar";
             this.cmdRecomeçar.UseVisualStyleBackColor = false;
+            this.cmdRecomeçar.Click += new System.EventHandler(this.cmdRecomeçar_Click);
             // 
             // cmdFinalizar
             // 
@@ -76,14 +77,15 @@ namespace projetofinaldesign
             this.cmdFinalizar.TabIndex = 14;
             this.cmdFinalizar.Text = "Finalizar o jogo";
             this.cmdFinalizar.UseVisualStyleBackColor = false;
+            this.cmdFinalizar.Click += new System.EventHandler(this.cmdFinalizar_Click);
             // 
             // lblVencedor
             // 
             this.lblVencedor.BackColor = System.Drawing.Color.Transparent;
             this.lblVencedor.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVencedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblVencedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblVencedor.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblVencedor.Location = new System.Drawing.Point(195, 105);
+            this.lblVencedor.Location = new System.Drawing.Point(197, 175);
             this.lblVencedor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVencedor.Name = "lblVencedor";
             this.lblVencedor.Size = new System.Drawing.Size(396, 109);
@@ -97,12 +99,12 @@ namespace projetofinaldesign
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label1.Location = new System.Drawing.Point(178, 9);
+            this.label1.Location = new System.Drawing.Point(144, -2);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(423, 96);
+            this.label1.Size = new System.Drawing.Size(485, 189);
             this.label1.TabIndex = 16;
-            this.label1.Text = "Perguntados";
+            this.label1.Text = "Vencedor do Perguntados";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBox8
@@ -128,7 +130,7 @@ namespace projetofinaldesign
             // pictureBox7
             // 
             this.pictureBox7.Image = global::projetofinaldesign.Properties.Resources.quimicaDesenho;
-            this.pictureBox7.Location = new System.Drawing.Point(204, 217);
+            this.pictureBox7.Location = new System.Drawing.Point(206, 287);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(56, 51);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -138,7 +140,7 @@ namespace projetofinaldesign
             // pictureBox6
             // 
             this.pictureBox6.Image = global::projetofinaldesign.Properties.Resources.boneco_Astronomia;
-            this.pictureBox6.Location = new System.Drawing.Point(515, 217);
+            this.pictureBox6.Location = new System.Drawing.Point(517, 287);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(57, 51);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,7 +150,7 @@ namespace projetofinaldesign
             // pictureBox5
             // 
             this.pictureBox5.Image = global::projetofinaldesign.Properties.Resources.bonecoBotanica;
-            this.pictureBox5.Location = new System.Drawing.Point(453, 217);
+            this.pictureBox5.Location = new System.Drawing.Point(455, 287);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(56, 51);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +160,7 @@ namespace projetofinaldesign
             // pictureBox4
             // 
             this.pictureBox4.Image = global::projetofinaldesign.Properties.Resources.bonecoFisia;
-            this.pictureBox4.Location = new System.Drawing.Point(390, 217);
+            this.pictureBox4.Location = new System.Drawing.Point(392, 287);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(57, 51);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +170,7 @@ namespace projetofinaldesign
             // pictureBox3
             // 
             this.pictureBox3.Image = global::projetofinaldesign.Properties.Resources.bonecoGeociencia;
-            this.pictureBox3.Location = new System.Drawing.Point(328, 217);
+            this.pictureBox3.Location = new System.Drawing.Point(330, 287);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(56, 51);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +180,7 @@ namespace projetofinaldesign
             // pictureBox2
             // 
             this.pictureBox2.Image = global::projetofinaldesign.Properties.Resources.bonecozoo;
-            this.pictureBox2.Location = new System.Drawing.Point(266, 217);
+            this.pictureBox2.Location = new System.Drawing.Point(268, 287);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(56, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
