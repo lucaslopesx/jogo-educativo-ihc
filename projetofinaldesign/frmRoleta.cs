@@ -27,7 +27,6 @@ namespace projetofinaldesign
             data.Categoria = categoria;
             InitializeComponent();
             this.ControlBox = false;
-
         }
 
         private void cmdRodar_Click(object sender, EventArgs e)
@@ -44,33 +43,12 @@ namespace projetofinaldesign
         {
             txtJogador1.Text = data.List().Tables[0].Rows[0].ItemArray[1].ToString();
             txtjogador2.Text = data.List().Tables[0].Rows[1].ItemArray[1].ToString();
-
             int i = 0;
             for (int j = 2; j < 8; j++)
             {
                 x[i] = int.Parse(data.ListBoneco(0, j).ToString());
                 i++;
             }
-            /*i = 0;
-            for (int j = 2; j < 8; j++)
-            {
-                x[i] = int.Parse(data.ListBoneco(1, j).ToString());
-                i++;
-            }*/
-            /*
-            dataJogador.X1 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[2].ToString());
-            dataJogador.X2 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[3].ToString());
-            dataJogador.X3 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[4].ToString());
-            dataJogador.X4 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[5].ToString());
-            dataJogador.X5 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[6].ToString());
-            dataJogador.X6 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[7].ToString());
-            dataJogador.Y1 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[2].ToString());
-            dataJogador.Y2 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[3].ToString());
-            dataJogador.Y3 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[4].ToString());
-            dataJogador.Y4 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[5].ToString());
-            dataJogador.Y5 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[6].ToString());
-            dataJogador.Y6 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[7].ToString());
-            */
             if (x[0] > 0)
             {
                 pictureBox14.Visible = false;
@@ -95,6 +73,7 @@ namespace projetofinaldesign
             {
                 pictureBox15.Visible = false;
             }
+
             i = 0;
             for (int j = 2; j < 8; j++)
             {

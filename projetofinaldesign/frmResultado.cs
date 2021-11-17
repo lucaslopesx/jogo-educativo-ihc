@@ -16,6 +16,8 @@ namespace projetofinaldesign
         Jogador dataJogador = new Jogador();
         Perguntas data = new Perguntas();
         private string jogador;
+        int[] x = new int[6];
+        int soma;
         public frmResultado(string categoria, string jogador)
         {
             this.jogador = jogador;
@@ -40,6 +42,20 @@ namespace projetofinaldesign
             else
                 pictureBox1.Image = Properties.Resources.quimicaDesenho;
 
+            int i = 0;
+            for (int j = 2; j < 8; j++)
+            {
+                x[i] = int.Parse(data.ListBoneco(0, j).ToString());
+                i++;
+            }
+            soma = x.Sum();
+            i = 0;
+            for (int j = 2; j < 8; j++)
+            {
+                x[i] = int.Parse(data.ListBoneco(1, j).ToString());
+                i++;
+            }
+            soma = x.Sum();
 
             dataJogador.X1 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[2].ToString());
             dataJogador.X2 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[3].ToString());
@@ -55,10 +71,19 @@ namespace projetofinaldesign
             dataJogador.Y6 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[7].ToString());
         }
 
+        public string finalizarJogo(string vencedor)
+        {
+            if (soma == 6)
+            {
+                return vencedor;
+            }
+            return "erro";
+        }
+
         private void cmdContinuar_Click(object sender, EventArgs e)
         {
-            
-            string vencedor = dataJogador.finalizaJogo(jogador);
+
+            string vencedor = finalizarJogo(jogador);
             if (vencedor != "erro")
             {
                 frmFinalJogo fj = new frmFinalJogo(vencedor);
@@ -69,7 +94,6 @@ namespace projetofinaldesign
                 frmCategoria fc = new frmCategoria();
                 fc.ShowDialog();
             }
-
             Hide();
         }
 
