@@ -16,7 +16,8 @@ namespace projetofinaldesign
         Perguntas data = new Perguntas();
         private string jogador;
         int[] x = new int[6];
-        int soma;
+        int soma1;
+        int soma2;
         public frmResultado(string categoria, string jogador)
         {
             this.jogador = jogador;
@@ -47,19 +48,23 @@ namespace projetofinaldesign
                 x[i] = int.Parse(data.ListBoneco(0, j).ToString());
                 i++;
             }
-            soma = x.Sum();
+            soma1 = x.Sum();
             i = 0;
             for (int j = 2; j < 8; j++)
             {
                 x[i] = int.Parse(data.ListBoneco(1, j).ToString());
                 i++;
             }
-            soma = x.Sum();
+            soma2 = x.Sum();
         }
 
         public string finalizarJogo(string vencedor)
         {
-            if (soma == 6)
+            if (soma1 == 6)
+            {
+                return vencedor;
+            }
+            if (soma2 == 6)
             {
                 return vencedor;
             }
