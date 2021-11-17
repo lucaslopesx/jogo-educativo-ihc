@@ -18,7 +18,6 @@ namespace projetofinaldesign
         int idPergunta;
         int[] x = new int[6];
 
-        Jogador dataJogador = new Jogador();
         public frmRoleta(string categoria, int idJogador)
         {
             this.idJogador = idJogador;

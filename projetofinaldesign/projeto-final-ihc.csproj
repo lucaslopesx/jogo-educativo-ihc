@@ -107,7 +107,6 @@
     <Compile Include="frmRoleta.Designer.cs">
       <DependentUpon>frmRoleta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Jogador.cs" />
     <Compile Include="Perguntas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
