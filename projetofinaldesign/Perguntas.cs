@@ -90,6 +90,14 @@ namespace projetofinaldesign
             connection.Disconnect();
             return connection.ds.Tables[0].Rows[i].ItemArray[j];
         }
+        public object ListCategoriaFeita(int j)
+        {
+            string sql = $"Select * from jogador where idJogador = {IdJogador}";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds.Tables[0].Rows[0].ItemArray[j];
+        }
         public DataSet ListBy()
         {
             string sql = "";
