@@ -31,8 +31,9 @@ namespace projetofinaldesign
                 data.InsertJogador();
 
                 frmCategoria fc = new frmCategoria();
+                Hide();
                 fc.ShowDialog();
-                this.Close();
+                
             }
             else
             {
@@ -45,10 +46,9 @@ namespace projetofinaldesign
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void frmCadastro_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frmPrincipal fp = new frmPrincipal();
-            fp.ShowDialog();
+            Application.Exit();
         }
     }
 }

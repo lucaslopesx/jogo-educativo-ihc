@@ -13,9 +13,11 @@ namespace projetofinaldesign
     public partial class frmResultado : Form
     {
         private string categoria;
-        Jogador dataJogador = new Jogador();
         Perguntas data = new Perguntas();
         private string jogador;
+        int[] x = new int[6];
+        int soma1;
+        int soma2;
         public frmResultado(string categoria, string jogador)
         {
             this.jogador = jogador;
@@ -40,25 +42,39 @@ namespace projetofinaldesign
             else
                 pictureBox1.Image = Properties.Resources.quimicaDesenho;
 
+            int i = 0;
+            for (int j = 2; j < 8; j++)
+            {
+                x[i] = int.Parse(data.ListBoneco(0, j).ToString());
+                i++;
+            }
+            soma1 = x.Sum();
+            i = 0;
+            for (int j = 2; j < 8; j++)
+            {
+                x[i] = int.Parse(data.ListBoneco(1, j).ToString());
+                i++;
+            }
+            soma2 = x.Sum();
+        }
 
-            dataJogador.X1 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[2].ToString());
-            dataJogador.X2 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[3].ToString());
-            dataJogador.X3 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[4].ToString());
-            dataJogador.X4 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[5].ToString());
-            dataJogador.X5 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[6].ToString());
-            dataJogador.X6 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[7].ToString());
-            dataJogador.Y1 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[2].ToString());
-            dataJogador.Y2 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[3].ToString());
-            dataJogador.Y3 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[4].ToString());
-            dataJogador.Y4 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[5].ToString());
-            dataJogador.Y5 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[6].ToString());
-            dataJogador.Y6 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[7].ToString());
+        public string finalizarJogo(string vencedor)
+        {
+            if (soma1 == 6)
+            {
+                return vencedor;
+            }
+            if (soma2 == 6)
+            {
+                return vencedor;
+            }
+            return "erro";
         }
 
         private void cmdContinuar_Click(object sender, EventArgs e)
         {
-            
-            string vencedor = dataJogador.finalizaJogo(jogador);
+
+            string vencedor = finalizarJogo(jogador);
             if (vencedor != "erro")
             {
                 frmFinalJogo fj = new frmFinalJogo(vencedor);
@@ -69,7 +85,6 @@ namespace projetofinaldesign
                 frmCategoria fc = new frmCategoria();
                 fc.ShowDialog();
             }
-
             Hide();
         }
 

@@ -13,7 +13,6 @@ namespace projetofinaldesign
     public partial class frmPergunta : Form
     {
         private Perguntas data = new Perguntas();
-        private Jogador dataJogador = new Jogador();
         int resultado;
         int escolha;
         string jogador;

@@ -36,5 +36,10 @@ namespace projetofinaldesign
             frmCadastro fc = new frmCadastro();
             fc.ShowDialog();
         }
+
+        private void frmFinalJogo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

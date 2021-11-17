@@ -16,8 +16,8 @@ namespace projetofinaldesign
         string categoria;
         int idJogador;
         int idPergunta;
+        int[] x = new int[6];
 
-        Jogador dataJogador = new Jogador();
         public frmRoleta(string categoria, int idJogador)
         {
             this.idJogador = idJogador;
@@ -26,7 +26,6 @@ namespace projetofinaldesign
             data.Categoria = categoria;
             InitializeComponent();
             this.ControlBox = false;
-
         }
 
         private void cmdRodar_Click(object sender, EventArgs e)
@@ -43,65 +42,64 @@ namespace projetofinaldesign
         {
             txtJogador1.Text = data.List().Tables[0].Rows[0].ItemArray[1].ToString();
             txtjogador2.Text = data.List().Tables[0].Rows[1].ItemArray[1].ToString();
-
-            dataJogador.X1 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[2].ToString());
-            dataJogador.X2 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[3].ToString());
-            dataJogador.X3 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[4].ToString());
-            dataJogador.X4 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[5].ToString());
-            dataJogador.X5 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[6].ToString());
-            dataJogador.X6 = int.Parse(data.List().Tables[0].Rows[0].ItemArray[7].ToString());
-            dataJogador.Y1 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[2].ToString());
-            dataJogador.Y2 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[3].ToString());
-            dataJogador.Y3 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[4].ToString());
-            dataJogador.Y4 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[5].ToString());
-            dataJogador.Y5 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[6].ToString());
-            dataJogador.Y6 = int.Parse(data.List().Tables[0].Rows[1].ItemArray[7].ToString());
-
-            if (dataJogador.X1 > 0)
+            int i = 0;
+            for (int j = 2; j < 8; j++)
+            {
+                x[i] = int.Parse(data.ListBoneco(0, j).ToString());
+                i++;
+            }
+            if (x[0] > 0)
             {
                 pictureBox14.Visible = false;
             }
-            if (dataJogador.X2 > 0)
+            if (x[1] > 0)
             {
                 pictureBox19.Visible = false;
             }
-            if (dataJogador.X3 > 0)
+            if (x[2] > 0)
             {
                 pictureBox18.Visible = false;
             }
-            if (dataJogador.X4 > 0)
+            if (x[3] > 0)
             {
                 pictureBox17.Visible = false;
             }
-            if (dataJogador.X5 > 0)
+            if (x[4] > 0)
             {
                 pictureBox16.Visible = false;
             }
-            if (dataJogador.X6 > 0)
+            if (x[5] > 0)
             {
                 pictureBox15.Visible = false;
             }
-            if (dataJogador.Y1 > 0)
+
+            i = 0;
+            for (int j = 2; j < 8; j++)
+            {
+                x[i] = int.Parse(data.ListBoneco(1, j).ToString());
+                i++;
+            }
+            if (x[0] > 0)
             {
                 pictureBox20.Visible = false;
             }
-            if (dataJogador.Y2 > 0)
+            if (x[1] > 0)
             {
                 pictureBox25.Visible = false;
             }
-            if (dataJogador.Y3 > 0)
+            if (x[2] > 0)
             {
                 pictureBox24.Visible = false;
             }
-            if (dataJogador.Y4 > 0)
+            if (x[3] > 0)
             {
                 pictureBox23.Visible = false;
             }
-            if (dataJogador.Y5 > 0)
+            if (x[4] > 0)
             {
                 pictureBox22.Visible = false;
             }
-            if (dataJogador.Y6 > 0)
+            if (x[5] > 0)
             {
                 pictureBox21.Visible = false;
             }

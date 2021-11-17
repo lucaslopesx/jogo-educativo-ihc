@@ -208,6 +208,7 @@ namespace projetofinaldesign
             this.Name = "frmFinalJogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmFinalJogo_FormClosed);
             this.Load += new System.EventHandler(this.frmFinalJogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
