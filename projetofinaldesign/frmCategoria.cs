@@ -87,6 +87,9 @@ namespace projetofinaldesign
             comboBox1.DataSource = data.List().Tables[0];
         }
 
-
+        private void frmCategoria_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

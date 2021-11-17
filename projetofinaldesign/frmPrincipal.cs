@@ -30,5 +30,10 @@ namespace projetofinaldesign
             i++;
             label1.Text = $"{i}";
         }
+
+        private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
