@@ -82,6 +82,14 @@ namespace projetofinaldesign
             connection.Disconnect();
             return connection.ds;
         }
+        public object ListBoneco(int i, int j)
+        {
+            string sql = $"Select top 2 * from jogador order by idJogador desc";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds.Tables[0].Rows[i].ItemArray[j];
+        }
         public DataSet ListBy()
         {
             string sql = "";
