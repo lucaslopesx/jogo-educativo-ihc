@@ -34,6 +34,7 @@ namespace projetofinaldesign
         private void cmdRecomeçar_Click(object sender, EventArgs e)
         {
             frmCadastro fc = new frmCadastro();
+            Hide();
             fc.ShowDialog();
         }
 
