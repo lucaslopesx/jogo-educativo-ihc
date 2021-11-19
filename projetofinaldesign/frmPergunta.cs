@@ -16,7 +16,7 @@ namespace projetofinaldesign
         int resultado;
         int escolha;
         string jogador;
-        private int tempo = 50;
+        private int tempo;
         private string categoriaaux;
         public frmPergunta(string categoria,int idJogador, int idPergunta)
         {
@@ -31,6 +31,7 @@ namespace projetofinaldesign
 
         private void frmPergunta_Load(object sender, EventArgs e)
         {
+            tempo = 50;
             data.Consult();
             data.ConsultJogador();
             txtCategoria.Text = data.Categoria;

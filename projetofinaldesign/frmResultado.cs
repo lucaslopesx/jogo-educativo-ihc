@@ -78,11 +78,13 @@ namespace projetofinaldesign
             if (vencedor != "erro")
             {
                 frmFinalJogo fj = new frmFinalJogo(vencedor);
+                Hide();
                 fj.ShowDialog();
             }
             else
             {
                 frmCategoria fc = new frmCategoria();
+                Hide();
                 fc.ShowDialog();
             }
             Hide();
