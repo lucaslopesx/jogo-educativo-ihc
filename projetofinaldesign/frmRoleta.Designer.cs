@@ -185,7 +185,7 @@ namespace projetofinaldesign
             this.cmdRodar.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold);
             this.cmdRodar.ForeColor = System.Drawing.SystemColors.Control;
             this.cmdRodar.Location = new System.Drawing.Point(286, 150);
-            this.cmdRodar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdRodar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdRodar.Name = "cmdRodar";
             this.cmdRodar.Size = new System.Drawing.Size(224, 41);
             this.cmdRodar.TabIndex = 23;
@@ -196,10 +196,11 @@ namespace projetofinaldesign
             // CmdParar
             // 
             this.CmdParar.BackColor = System.Drawing.Color.Teal;
+            this.CmdParar.Enabled = false;
             this.CmdParar.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold);
             this.CmdParar.ForeColor = System.Drawing.SystemColors.Control;
             this.CmdParar.Location = new System.Drawing.Point(284, 436);
-            this.CmdParar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdParar.Margin = new System.Windows.Forms.Padding(2);
             this.CmdParar.Name = "CmdParar";
             this.CmdParar.Size = new System.Drawing.Size(224, 41);
             this.CmdParar.TabIndex = 24;
@@ -222,7 +223,7 @@ namespace projetofinaldesign
             this.aGauge1.BaseArcWidth = 2;
             this.aGauge1.GaugeAutoSize = false;
             this.aGauge1.Location = new System.Drawing.Point(298, 220);
-            this.aGauge1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aGauge1.Margin = new System.Windows.Forms.Padding(2);
             this.aGauge1.MaxValue = 360F;
             this.aGauge1.MinValue = 0F;
             this.aGauge1.Name = "aGauge1";
