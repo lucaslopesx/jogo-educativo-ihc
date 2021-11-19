@@ -57,6 +57,7 @@ namespace projetofinaldesign
             else
             {
                 FrmErrou fe = new FrmErrou();
+                timer1.Enabled = false;
                 Hide();
                 fe.ShowDialog();
             }

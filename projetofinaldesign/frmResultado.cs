@@ -73,7 +73,6 @@ namespace projetofinaldesign
 
         private void cmdContinuar_Click(object sender, EventArgs e)
         {
-
             string vencedor = finalizarJogo(jogador);
             if (vencedor != "erro")
             {

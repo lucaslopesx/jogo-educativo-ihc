@@ -43,7 +43,6 @@ namespace projetofinaldesign
             this.cmdRodar = new System.Windows.Forms.Button();
             this.CmdParar = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.aGauge1 = new System.Windows.Forms.AGauge();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
@@ -62,6 +61,7 @@ namespace projetofinaldesign
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.aGauge1 = new System.Windows.Forms.AGauge();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -211,51 +211,6 @@ namespace projetofinaldesign
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // aGauge1
-            // 
-            this.aGauge1.BackgroundImage = global::projetofinaldesign.Properties.Resources.depositphotos_103742838_stock_photo_wheel_fortune_10_area_removebg_preview;
-            this.aGauge1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.aGauge1.BaseArcColor = System.Drawing.Color.Gray;
-            this.aGauge1.BaseArcRadius = 80;
-            this.aGauge1.BaseArcStart = 135;
-            this.aGauge1.BaseArcSweep = 360;
-            this.aGauge1.BaseArcWidth = 2;
-            this.aGauge1.GaugeAutoSize = false;
-            this.aGauge1.Location = new System.Drawing.Point(298, 220);
-            this.aGauge1.Margin = new System.Windows.Forms.Padding(2);
-            this.aGauge1.MaxValue = 360F;
-            this.aGauge1.MinValue = 0F;
-            this.aGauge1.Name = "aGauge1";
-            this.aGauge1.NeedleColor1 = System.Windows.Forms.AGaugeNeedleColor.Red;
-            this.aGauge1.NeedleColor2 = System.Drawing.Color.Red;
-            this.aGauge1.NeedleRadius = 100;
-            this.aGauge1.NeedleType = System.Windows.Forms.NeedleType.Advance;
-            this.aGauge1.NeedleWidth = 2;
-            this.aGauge1.ScaleLinesInterColor = System.Drawing.Color.Black;
-            this.aGauge1.ScaleLinesInterInnerRadius = 80;
-            this.aGauge1.ScaleLinesInterOuterRadius = 80;
-            this.aGauge1.ScaleLinesInterWidth = 1;
-            this.aGauge1.ScaleLinesMajorColor = System.Drawing.Color.Black;
-            this.aGauge1.ScaleLinesMajorInnerRadius = 80;
-            this.aGauge1.ScaleLinesMajorOuterRadius = 0;
-            this.aGauge1.ScaleLinesMajorStepValue = 360F;
-            this.aGauge1.ScaleLinesMajorWidth = 2;
-            this.aGauge1.ScaleLinesMinorColor = System.Drawing.Color.Gray;
-            this.aGauge1.ScaleLinesMinorInnerRadius = 80;
-            this.aGauge1.ScaleLinesMinorOuterRadius = 80;
-            this.aGauge1.ScaleLinesMinorTicks = 9;
-            this.aGauge1.ScaleLinesMinorWidth = 1;
-            this.aGauge1.ScaleNumbersColor = System.Drawing.Color.Black;
-            this.aGauge1.ScaleNumbersFormat = null;
-            this.aGauge1.ScaleNumbersRadius = 300;
-            this.aGauge1.ScaleNumbersRotation = 0;
-            this.aGauge1.ScaleNumbersStartScaleLine = 0;
-            this.aGauge1.ScaleNumbersStepScaleLines = 1;
-            this.aGauge1.Size = new System.Drawing.Size(200, 211);
-            this.aGauge1.TabIndex = 22;
-            this.aGauge1.Text = "aGauge1";
-            this.aGauge1.Value = 12F;
             // 
             // pictureBox14
             // 
@@ -437,6 +392,51 @@ namespace projetofinaldesign
             this.pictureBox13.TabIndex = 37;
             this.pictureBox13.TabStop = false;
             // 
+            // aGauge1
+            // 
+            this.aGauge1.BackgroundImage = global::projetofinaldesign.Properties.Resources.depositphotos_103742838_stock_photo_wheel_fortune_10_area_removebg_preview;
+            this.aGauge1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.aGauge1.BaseArcColor = System.Drawing.Color.Gray;
+            this.aGauge1.BaseArcRadius = 80;
+            this.aGauge1.BaseArcStart = 135;
+            this.aGauge1.BaseArcSweep = 360;
+            this.aGauge1.BaseArcWidth = 2;
+            this.aGauge1.GaugeAutoSize = false;
+            this.aGauge1.Location = new System.Drawing.Point(298, 220);
+            this.aGauge1.Margin = new System.Windows.Forms.Padding(2);
+            this.aGauge1.MaxValue = 360F;
+            this.aGauge1.MinValue = 0F;
+            this.aGauge1.Name = "aGauge1";
+            this.aGauge1.NeedleColor1 = System.Windows.Forms.AGaugeNeedleColor.Red;
+            this.aGauge1.NeedleColor2 = System.Drawing.Color.Red;
+            this.aGauge1.NeedleRadius = 100;
+            this.aGauge1.NeedleType = System.Windows.Forms.NeedleType.Advance;
+            this.aGauge1.NeedleWidth = 2;
+            this.aGauge1.ScaleLinesInterColor = System.Drawing.Color.Black;
+            this.aGauge1.ScaleLinesInterInnerRadius = 80;
+            this.aGauge1.ScaleLinesInterOuterRadius = 80;
+            this.aGauge1.ScaleLinesInterWidth = 1;
+            this.aGauge1.ScaleLinesMajorColor = System.Drawing.Color.Black;
+            this.aGauge1.ScaleLinesMajorInnerRadius = 80;
+            this.aGauge1.ScaleLinesMajorOuterRadius = 0;
+            this.aGauge1.ScaleLinesMajorStepValue = 360F;
+            this.aGauge1.ScaleLinesMajorWidth = 2;
+            this.aGauge1.ScaleLinesMinorColor = System.Drawing.Color.Gray;
+            this.aGauge1.ScaleLinesMinorInnerRadius = 80;
+            this.aGauge1.ScaleLinesMinorOuterRadius = 80;
+            this.aGauge1.ScaleLinesMinorTicks = 9;
+            this.aGauge1.ScaleLinesMinorWidth = 1;
+            this.aGauge1.ScaleNumbersColor = System.Drawing.Color.Black;
+            this.aGauge1.ScaleNumbersFormat = null;
+            this.aGauge1.ScaleNumbersRadius = 300;
+            this.aGauge1.ScaleNumbersRotation = 0;
+            this.aGauge1.ScaleNumbersStartScaleLine = 0;
+            this.aGauge1.ScaleNumbersStepScaleLines = 1;
+            this.aGauge1.Size = new System.Drawing.Size(200, 211);
+            this.aGauge1.TabIndex = 22;
+            this.aGauge1.Text = "aGauge1";
+            this.aGauge1.Value = 12F;
+            // 
             // frmRoleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,6 +473,7 @@ namespace projetofinaldesign
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtJogador1);
             this.Controls.Add(this.txtjogador2);
+            this.MaximizeBox = false;
             this.Name = "frmRoleta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRoleta";

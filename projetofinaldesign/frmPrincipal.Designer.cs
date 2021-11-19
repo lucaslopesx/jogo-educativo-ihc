@@ -75,6 +75,8 @@ namespace projetofinaldesign
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdComecar);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
